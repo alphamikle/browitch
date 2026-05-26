@@ -4,7 +4,9 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
-rm -rf dist build/Browitch.xcarchive
+VERSION="$(tr -d '[:space:]' < VERSION)"
+
+rm -rf dist build/Browitch.xcarchive build/dmg
 mkdir -p dist build
 
 xcodebuild \
@@ -31,5 +33,9 @@ xcodebuild \
   -archivePath build/Browitch.xcarchive \
   archive
 
+Scripts/create_dmg.sh
+
 echo "Built dist/Browitch.app"
 echo "Archived build/Browitch.xcarchive"
+echo "Packaged dist/Browitch.dmg"
+echo "Packaged dist/Browitch-$VERSION.dmg"

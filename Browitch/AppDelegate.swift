@@ -4,11 +4,13 @@ import AppKit
 final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private let browserManager = BrowserManager()
     private let loginItemController = LoginItemController()
+    private let toastController = ToastWindowController()
     private var statusItem: NSStatusItem?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         configureStatusItem()
         rebuildMenu()
+        toastController.show()
 
         NSWorkspace.shared.notificationCenter.addObserver(
             self,
@@ -26,6 +28,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func applicationWillTerminate(_ notification: Notification) {
         NSWorkspace.shared.notificationCenter.removeObserver(self)
+    }
+
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        toastController.show()
+        return false
     }
 
     private func configureStatusItem() {

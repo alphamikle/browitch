@@ -12,6 +12,8 @@
 		1A0000010000000000000003 /* BrowserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000010000000000000013 /* BrowserManager.swift */; };
 		1A0000010000000000000004 /* LoginItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000010000000000000014 /* LoginItemController.swift */; };
 		1A0000010000000000000005 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000010000000000000015 /* StatusIcon.swift */; };
+		1A0000010000000000000006 /* ToastWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000010000000000000017 /* ToastWindowController.swift */; };
+		1A0000010000000000000007 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1A0000010000000000000018 /* AppIcon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1A0000010000000000000014 /* LoginItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemController.swift; sourceTree = "<group>"; };
 		1A0000010000000000000015 /* StatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
 		1A0000010000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0000010000000000000017 /* ToastWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastWindowController.swift; sourceTree = "<group>"; };
+		1A0000010000000000000018 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Resources/AppIcon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 				1A0000010000000000000013 /* BrowserManager.swift */,
 				1A0000010000000000000014 /* LoginItemController.swift */,
 				1A0000010000000000000015 /* StatusIcon.swift */,
+				1A0000010000000000000017 /* ToastWindowController.swift */,
+				1A0000010000000000000018 /* AppIcon.icns */,
 				1A0000010000000000000016 /* Info.plist */,
 			);
 			path = Browitch;
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0000010000000000000007 /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +144,7 @@
 				1A0000010000000000000003 /* BrowserManager.swift in Sources */,
 				1A0000010000000000000004 /* LoginItemController.swift in Sources */,
 				1A0000010000000000000005 /* StatusIcon.swift in Sources */,
+				1A0000010000000000000006 /* ToastWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +280,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfa.browitch;
 				PRODUCT_NAME = Browitch;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -295,7 +303,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfa.browitch;
 				PRODUCT_NAME = Browitch;
 				SWIFT_EMIT_LOC_STRINGS = YES;
